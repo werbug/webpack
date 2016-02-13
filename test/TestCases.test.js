@@ -23,6 +23,11 @@ describe("TestCases", function() {
 	[{
 		name: "normal"
 	}, {
+		name: "inline",
+		plugins: [
+			new webpack.optimize.InlinePlugin()
+		]
+	}, {
 		name: "hot",
 		plugins: [
 			new webpack.HotModuleReplacementPlugin()
@@ -62,15 +67,21 @@ describe("TestCases", function() {
 		name: "devtool-cheap-eval-module-source-map",
 		devtool: "cheap-eval-module-source-map"
 	}, {
-		name: "devtool-cheap-source-map",
-		devtool: "cheap-source-map"
-	}, {
 		name: "minimized",
 		excludeNominimize: true,
 		plugins: [
 			new webpack.optimize.UglifyJsPlugin({
 				sourceMap: false
 			})
+		]
+	}, {
+		name: "inlined-minimized",
+		excludeNominimize: true,
+		plugins: [
+			new webpack.optimize.UglifyJsPlugin({
+				sourceMap: false
+			}),
+			new webpack.optimize.InlinePlugin()
 		]
 	}, {
 		name: "minimized-source-map",

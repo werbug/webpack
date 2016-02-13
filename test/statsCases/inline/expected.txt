@@ -1,0 +1,14 @@
+Hash: 7a694c3d7800874f69b8
+Time: Xms
+  Asset     Size  Chunks             Chunk Names
+main.js  4.61 kB       0  [emitted]  main
+chunk    {0} main.js (main) 68 bytes [rendered]
+    [0] (webpack)/test/statsCases/inline/index.js 28 bytes {0} [built]
+    [1] (webpack)/test/statsCases/inline/a.js 0 bytes {0} [inlined into [0]] [built]
+        harmony import ./a [0] (webpack)/test/statsCases/inline/index.js 1:0-13
+        harmony import ./a [2] (webpack)/test/statsCases/inline/b.js 2:0-13
+        harmony import ./a [3] (webpack)/test/statsCases/inline/c.js 1:0-12
+    [2] (webpack)/test/statsCases/inline/b.js 28 bytes {0} [inlined into [0]] [built]
+        harmony import ./b [0] (webpack)/test/statsCases/inline/index.js 2:0-13
+    [3] (webpack)/test/statsCases/inline/c.js 12 bytes {0} [inlined into [0]] [built]
+        harmony import ./c [2] (webpack)/test/statsCases/inline/b.js 1:0-13
