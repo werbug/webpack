@@ -45,25 +45,27 @@ exports.add = function() {
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 
+/******/ 		var module = installedModules[moduleId];
+
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
+/******/ 		if(!module) {
 
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
+/******/ 			// Create a new module (and put it into the cache)
+/******/ 			module = installedModules[moduleId] = {
+/******/ 				e: {},
+/******/ 				i: moduleId,
+/******/ 				l: false
+/******/ 			};
 
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 			// Execute the module function
+/******/ 			modules[moduleId].call(module.e, module, module.e, __webpack_require__);
 
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
+/******/ 			// Flag the module as loaded
+/******/ 			module.l = true;
+/******/ 		}
 
 /******/ 		// Return the exports of the module
-/******/ 		return module.exports;
+/******/ 		return module.e;
 /******/ 	}
 
 
@@ -128,10 +130,10 @@ exports.add = function() {
 
 ```
 Hash: 604c5c1fe4f4a9772853
-Version: webpack 2.0.6-beta
-Time: 75ms
+Version: webpack 2.0.7-beta
+Time: 115ms
     Asset     Size  Chunks             Chunk Names
-output.js  2.17 kB       0  [emitted]  main
+output.js  2.14 kB       0  [emitted]  main
 chunk    {0} output.js (main) 329 bytes [rendered]
     > main [1] ./example.js 
     [0] ./increment.js 98 bytes {0} [built]
@@ -145,10 +147,10 @@ chunk    {0} output.js (main) 329 bytes [rendered]
 
 ```
 Hash: 604c5c1fe4f4a9772853
-Version: webpack 2.0.6-beta
-Time: 137ms
+Version: webpack 2.0.7-beta
+Time: 186ms
     Asset       Size  Chunks             Chunk Names
-output.js  423 bytes       0  [emitted]  main
+output.js  372 bytes       0  [emitted]  main
 chunk    {0} output.js (main) 329 bytes [rendered]
     > main [1] ./example.js 
     [0] ./increment.js 98 bytes {0} [built]

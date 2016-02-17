@@ -1,7 +1,7 @@
 Hash: d780e0917fd50b99bb41
 Time: Xms
   Asset     Size  Chunks             Chunk Names
-main.js  2.42 kB       0  [emitted]  main
+main.js  2.43 kB       0  [emitted]  main
 chunk    {0} main.js (main) 30 bytes [rendered]
     [0] (webpack)/test/statsCases/half-inline/a.js 0 bytes {0} [built]
         cjs require ./a [1] (webpack)/test/statsCases/half-inline/index.js 1:0-14
