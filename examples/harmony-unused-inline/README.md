@@ -51,47 +51,19 @@ export { add as reexportedAdd, multiply as reexportedMultiply } from "./math";
 
 ``` javascript
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		var module = installedModules[moduleId];
-
-/******/ 		// Check if module is in cache
-/******/ 		if(!module) {
-
-/******/ 			// Create a new module (and put it into the cache)
-/******/ 			module = installedModules[moduleId] = {
-/******/ 				e: {},
-/******/ 				i: moduleId,
-/******/ 				l: false
-/******/ 			};
-
-/******/ 			// Execute the module function
-/******/ 			modules[moduleId].call(module.e, module, module.e, __webpack_require__);
-
-/******/ 			// Flag the module as loaded
-/******/ 			module.l = true;
-/******/ 		}
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.e;
-/******/ 	}
+/******/ 	// Context information
+/******/ 	var __webpack_require__ = {};
 
 
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "js/";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	var __webpack_module__ = {l: false, i: 0, e: {}};
+/******/ 	modules[0].call(__webpack_module__.e, __webpack_module__, __webpack_module__.e, __webpack_require__);
+/******/ 	__webpack_module__.l = true;
+/******/ 	return __webpack_module__.e;
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -102,7 +74,7 @@ export { add as reexportedAdd, multiply as reexportedMultiply } from "./math";
   !*** inlined: ./library.js ***!
   !*** ./example.js ***!
   \********************/
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
 	/*!****************!*\
 	  !*** ./abc.js ***!
@@ -175,7 +147,7 @@ export { add as reexportedAdd, multiply as reexportedMultiply } from "./math";
 # js/output.js
 
 ``` javascript
-!function(n){function r(a){var t=e[a];return t||(t=e[a]={e:{},i:a,l:!1},n[a].call(t.e,t,t.e,r),t.l=!0),t.e}var e={};return r.m=n,r.c=e,r.p="js/",r(r.s=0)}([function(n,r,e){var a={};(function(n,r){n.l=!0}).call(a,{e:a,i:1,l:!1},a);var t={};(function(n,r){function e(){for(var n=0,r=0,e=arguments,a=e.length;a>r;)n+=e[r++];return n}function a(){for(var n=1,r=0,e=arguments,a=e.length;a>r;)n*=e[r++];return n}r.a=e,r.b=a,n.l=!0}).call(t,{e:t,i:3,l:!1},t);var l={};(function(n,r){var e=t;Object.defineProperty(r,"a",{configurable:!1,enumerable:!0,get:function(){return e.b}}),n.l=!0}).call(l,{e:l,i:2,l:!1},l);var u=t,i=l;u.a.bind()(1,2),i.a.bind()(1,2)}]);
+!function(n){var r={};r.p="js/";var e={l:!1,i:0,e:{}};return n[0].call(e.e,e,e.e,r),e.l=!0,e.e}([function(n,r){var e={};(function(n,r){n.l=!0}).call(e,{e:e,i:1,l:!1},e);var a={};(function(n,r){function e(){for(var n=0,r=0,e=arguments,a=e.length;a>r;)n+=e[r++];return n}function a(){for(var n=1,r=0,e=arguments,a=e.length;a>r;)n*=e[r++];return n}r.a=e,r.b=a,n.l=!0}).call(a,{e:a,i:3,l:!1},a);var l={};(function(n,r){var e=a;Object.defineProperty(r,"a",{configurable:!1,enumerable:!0,get:function(){return e.b}}),n.l=!0}).call(l,{e:l,i:2,l:!1},l);var t=a,i=l;t.a.bind()(1,2),i.a.bind()(1,2)}]);
 ```
 
 # Info
@@ -185,9 +157,9 @@ export { add as reexportedAdd, multiply as reexportedMultiply } from "./math";
 ```
 Hash: 263715f87c915965d5e3
 Version: webpack 2.0.7-beta
-Time: 117ms
-    Asset  Size  Chunks             Chunk Names
-output.js  4 kB       0  [emitted]  main
+Time: 187ms
+    Asset     Size  Chunks             Chunk Names
+output.js  3.27 kB       0  [emitted]  main
 chunk    {0} output.js (main) 728 bytes [rendered]
     > main [0] ./example.js 
     [0] ./example.js 121 bytes {0} [built]
@@ -205,9 +177,9 @@ chunk    {0} output.js (main) 728 bytes [rendered]
 ```
 Hash: 263715f87c915965d5e3
 Version: webpack 2.0.7-beta
-Time: 193ms
+Time: 251ms
     Asset       Size  Chunks             Chunk Names
-output.js  653 bytes       0  [emitted]  main
+output.js  592 bytes       0  [emitted]  main
 chunk    {0} output.js (main) 728 bytes [rendered]
     > main [0] ./example.js 
     [0] ./example.js 121 bytes {0} [built]
